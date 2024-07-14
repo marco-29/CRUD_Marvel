@@ -1,0 +1,617 @@
+ERROR - 2024-07-14 05:42:34 --> mysqli_sql_exception: Unknown column 'personajes' in 'field list' in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('SELECT `persona...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `persona...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `persona...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `persona...', Array, false)
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(930): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', Array)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->index()
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-14 05:42:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personajes' in 'field list'
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `personajes`
+FROM `personajes`', [], false)
+ 2 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 05:42:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personajes' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `personajes`
+FROM `personajes`')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `personajes`
+FROM `personajes`')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `personajes`
+FROM `personajes`', [], false)
+ 4 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 05:42:34 --> [Caused by] mysqli_sql_exception: Unknown column 'personajes' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('SELECT `personajes`
+FROM `personajes`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `personajes`
+FROM `personajes`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `personajes`
+FROM `personajes`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `personajes`
+FROM `personajes`', [], false)
+ 5 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 05:43:28 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php on line 930
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseBuilder.php on line 1623.
+ 1 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get('personajes')
+ 2 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 05:44:59 --> TypeError: CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php on line 23
+[Method: GET, Route: crud]
+in SYSTEMPATH/BaseModel.php on line 654.
+ 1 APPPATH/Controllers/Crud.php(23): CodeIgniter\BaseModel->findAll('personajes')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:19:05 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php on line 930
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseBuilder.php on line 1623.
+ 1 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get('personajes')
+ 2 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:19:18 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php on line 930
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseBuilder.php on line 1623.
+ 1 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get('personajes')
+ 2 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:19:24 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php on line 930
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseBuilder.php on line 1623.
+ 1 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get('personajes')
+ 2 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:19:27 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php on line 930
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseBuilder.php on line 1623.
+ 1 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get('personajes')
+ 2 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:19:35 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php on line 930
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseBuilder.php on line 1623.
+ 1 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get('personajes')
+ 2 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:19:36 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php on line 930
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseBuilder.php on line 1623.
+ 1 SYSTEMPATH/Model.php(930): CodeIgniter\Database\BaseBuilder->get('personajes')
+ 2 APPPATH/Controllers/Crud.php(23): CodeIgniter\Model->__call('get', [...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:20:38 --> TypeError: CodeIgniter\BaseModel::findAll(): Argument #1 ($limit) must be of type ?int, string given, called in /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php on line 23
+[Method: GET, Route: crud]
+in SYSTEMPATH/BaseModel.php on line 654.
+ 1 APPPATH/Controllers/Crud.php(23): CodeIgniter\BaseModel->findAll('personajes')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-14 06:21:52 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('SELECT `name`\nF...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`\nF...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`\nF...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `name`\nF...', Array, false)
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/BaseModel.php(610): CodeIgniter\Model->doFind(false, NULL)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(252): CodeIgniter\BaseModel->find()
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/BaseModel.php(641): CodeIgniter\Model->doFindColumn('name')
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(23): CodeIgniter\BaseModel->findColumn('name')
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->index()
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#11 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2024-07-14 06:21:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `name`
+FROM `personajes`
+WHERE `personajes`.`id` IS NULL', [], false)
+ 2 SYSTEMPATH/Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(610): CodeIgniter\Model->doFind(false, null)
+ 4 SYSTEMPATH/Model.php(252): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH/BaseModel.php(641): CodeIgniter\Model->doFindColumn('name')
+ 6 APPPATH/Controllers/Crud.php(23): CodeIgniter\BaseModel->findColumn('name')
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:21:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`
+FROM `personajes`
+WHERE `personajes`.`id` IS NULL')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`
+FROM `personajes`
+WHERE `personajes`.`id` IS NULL')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `name`
+FROM `personajes`
+WHERE `personajes`.`id` IS NULL', [], false)
+ 4 SYSTEMPATH/Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(610): CodeIgniter\Model->doFind(false, null)
+ 6 SYSTEMPATH/Model.php(252): CodeIgniter\BaseModel->find()
+ 7 SYSTEMPATH/BaseModel.php(641): CodeIgniter\Model->doFindColumn('name')
+ 8 APPPATH/Controllers/Crud.php(23): CodeIgniter\BaseModel->findColumn('name')
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:21:52 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('SELECT `name`
+FROM `personajes`
+WHERE `personajes`.`id` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`
+FROM `personajes`
+WHERE `personajes`.`id` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`
+FROM `personajes`
+WHERE `personajes`.`id` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `name`
+FROM `personajes`
+WHERE `personajes`.`id` IS NULL', [], false)
+ 5 SYSTEMPATH/Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(610): CodeIgniter\Model->doFind(false, null)
+ 7 SYSTEMPATH/Model.php(252): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH/BaseModel.php(641): CodeIgniter\Model->doFindColumn('name')
+ 9 APPPATH/Controllers/Crud.php(23): CodeIgniter\BaseModel->findColumn('name')
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:22:34 --> ErrorException: Array to string conversion
+[Method: GET, Route: crud]
+in APPPATH/Views/crud.php on line 2.
+ 1 APPPATH/Views/crud.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php', 2)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
+ 5 APPPATH/Controllers/Crud.php(48): view('crud', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-14 06:24:42 --> mysqli_sql_exception: Unknown column 'personajes.deleted_at' in 'where clause' in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(23): CodeIgniter\BaseModel->findAll()
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->index()
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-14 06:24:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personajes.deleted_at' in 'where clause'
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personajes`
+WHERE `personajes`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Crud.php(23): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:24:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'personajes.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personajes`
+WHERE `personajes`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personajes`
+WHERE `personajes`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personajes`
+WHERE `personajes`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH/Controllers/Crud.php(23): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:24:42 --> [Caused by] mysqli_sql_exception: Unknown column 'personajes.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('SELECT *
+FROM `personajes`
+WHERE `personajes`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `personajes`
+WHERE `personajes`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `personajes`
+WHERE `personajes`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `personajes`
+WHERE `personajes`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Crud.php(23): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-14 06:32:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes' at line 1 in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('SELECT.* FROM p...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT.* FROM p...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT.* FROM p...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/app/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT.* FROM p...')
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->index()
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-14 06:32:08 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes' at line 1
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT.* FROM personajes')
+ 2 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:32:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT.* FROM personajes')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT.* FROM personajes')
+ 3 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT.* FROM personajes')
+ 4 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:32:08 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('SELECT.* FROM personajes', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT.* FROM personajes')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT.* FROM personajes')
+ 4 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT.* FROM personajes')
+ 5 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-14 06:33:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes' at line 1 in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('SELECT.* FROM p...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT.* FROM p...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT.* FROM p...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/app/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT.* FROM p...')
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->index()
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-14 06:33:19 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes' at line 1
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT.* FROM personajes')
+ 2 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:33:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT.* FROM personajes')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT.* FROM personajes')
+ 3 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT.* FROM personajes')
+ 4 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:33:19 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('SELECT.* FROM personajes', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT.* FROM personajes')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT.* FROM personajes')
+ 4 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT.* FROM personajes')
+ 5 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-14 06:35:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM personajes' at line 1 in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('SELECT all FROM...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT all FROM...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT all FROM...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/app/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT all FROM...')
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->index()
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-14 06:35:38 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM personajes' at line 1
+[Method: GET, Route: crud]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT all FROM personajes')
+ 2 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:35:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM personajes' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT all FROM personajes')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT all FROM personajes')
+ 3 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT all FROM personajes')
+ 4 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:35:38 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM personajes' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('SELECT all FROM personajes', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT all FROM personajes')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT all FROM personajes')
+ 4 APPPATH/Models/Personajes_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT all FROM personajes')
+ 5 APPPATH/Controllers/Crud.php(25): App\Models\Personajes_model->obtener_tabla()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:47:49 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: crud]
+in APPPATH/Controllers/Crud.php on line 32.
+ 1 APPPATH/Controllers/Crud.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php', 32)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:48:26 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: crud]
+in APPPATH/Controllers/Crud.php on line 32.
+ 1 APPPATH/Controllers/Crud.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php', 32)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:48:55 --> ErrorException: Attempt to read property "name" on array
+[Method: GET, Route: crud]
+in APPPATH/Controllers/Crud.php on line 33.
+ 1 APPPATH/Controllers/Crud.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on array', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php', 33)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 06:49:24 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: crud]
+in APPPATH/Controllers/Crud.php on line 34.
+ 1 APPPATH/Controllers/Crud.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "description"', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php', 34)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 07:39:38 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: crud]
+in APPPATH/Views/crud.php on line 41.
+ 1 APPPATH/Views/crud.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php', 41)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
+ 5 APPPATH/Controllers/Crud.php(55): view('crud', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 07:39:56 --> ErrorException: Attempt to read property "identificador" on array
+[Method: GET, Route: crud]
+in APPPATH/Views/crud.php on line 42.
+ 1 APPPATH/Views/crud.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identificador" on array', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php', 42)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
+ 5 APPPATH/Controllers/Crud.php(55): view('crud', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 07:41:09 --> ErrorException: Undefined variable $personaj
+[Method: GET, Route: crud]
+in APPPATH/Views/crud.php on line 46.
+ 1 APPPATH/Views/crud.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personaj', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php', 46)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
+ 5 APPPATH/Controllers/Crud.php(55): view('crud', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 07:41:19 --> ErrorException: Undefined array key "efecha_actualizacion"
+[Method: GET, Route: crud]
+in APPPATH/Views/crud.php on line 46.
+ 1 APPPATH/Views/crud.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "efecha_actualizacion"', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php', 46)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
+ 5 APPPATH/Controllers/Crud.php(55): view('crud', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 07:42:16 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+[Method: GET, Route: crud]
+in APPPATH/Views/crud.php on line 45.
+ 1 APPPATH/Views/crud.php(45): date('d,m,Y', '2024-07-14 00:49:46')
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
+ 5 APPPATH/Controllers/Crud.php(55): view('crud', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 07:42:29 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+[Method: GET, Route: crud]
+in APPPATH/Views/crud.php on line 45.
+ 1 APPPATH/Views/crud.php(45): date('d:m:Y', '2024-07-14 00:49:46')
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
+ 5 APPPATH/Controllers/Crud.php(55): view('crud', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 07:43:37 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+[Method: GET, Route: crud]
+in APPPATH/Views/crud.php on line 45.
+ 1 APPPATH/Views/crud.php(45): date('d/m/Y H:i:s', '2024-07-14 00:49:46')
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
+ 5 APPPATH/Controllers/Crud.php(55): view('crud', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

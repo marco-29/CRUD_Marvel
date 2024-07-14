@@ -1,0 +1,61 @@
+CRITICAL - 2024-07-12 20:05:47 --> ErrorException: Attempt to read property "privatekey" on null
+[Method: GET, Route: /]
+in APPPATH/Libraries/ApiMarvel.php on line 19.
+ 1 APPPATH/Libraries/ApiMarvel.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "privatekey" on null', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Libraries/ApiMarvel.php', 19)
+ 2 APPPATH/Controllers/Home.php(14): App\Libraries\ApiMarvel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-12 20:07:32 --> ErrorException: Attempt to read property "privatekey" on null
+[Method: GET, Route: /]
+in APPPATH/Libraries/ApiMarvel.php on line 19.
+ 1 APPPATH/Libraries/ApiMarvel.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "privatekey" on null', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Libraries/ApiMarvel.php', 19)
+ 2 APPPATH/Controllers/Home.php(14): App\Libraries\ApiMarvel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-12 20:08:37 --> ErrorException: Attempt to read property "publickey" on null
+[Method: GET, Route: /]
+in APPPATH/Libraries/ApiMarvel.php on line 27.
+ 1 APPPATH/Libraries/ApiMarvel.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "publickey" on null', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Libraries/ApiMarvel.php', 27)
+ 2 APPPATH/Controllers/Home.php(22): App\Libraries\ApiMarvel->obtener_personajes()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-12 20:08:47 --> ErrorException: Undefined variable $persoanjes
+[Method: GET, Route: /]
+in APPPATH/Views/home.php on line 1.
+ 1 APPPATH/Views/home.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persoanjes', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/home.php', 1)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH/Controllers/Home.php(21): view('home', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-12 22:20:18 --> ErrorException: Undefined variable $personajes
+[Method: GET, Route: /]
+in APPPATH/Views/home.php on line 1.
+ 1 APPPATH/Views/home.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $personajes', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/home.php', 1)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH/Controllers/Home.php(21): view('home')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

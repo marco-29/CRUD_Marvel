@@ -91,7 +91,7 @@
                             <td><?php echo $personaje['descripcion']; ?></td>
                             <td><?php echo date('d/m/Y H:i:s', strtotime($personaje['fecha_registro'])); ?></td>
                             <td><?php echo date('d/m/Y H:i:s', strtotime($personaje['fecha_actualizacion'])); ?></td>
-                            <td><a href="<?php echo base_url('crud/' . $personaje['id'] . '/edit'); ?>"><button type="button" class="btn btn-info">Editar</button></a> | <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminaModal" data-bs-url="<?php echo base_url('crud/' . $personaje['id']); ?>">Eliminar</button></td>
+                            <td><a href="<?php echo base_url('crud/' . $personaje['id'] . '/edit'); ?>"><button type="button" class="btn btn-info btn-sm">Editar</button></a> <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#eliminaModal" data-bs-url="<?php echo base_url('crud/' . $personaje['id']); ?>">Eliminar</button></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

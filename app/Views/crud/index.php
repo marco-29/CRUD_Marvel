@@ -91,13 +91,49 @@
                             <td><?php echo $personaje['descripcion']; ?></td>
                             <td><?php echo date('d/m/Y H:i:s', strtotime($personaje['fecha_registro'])); ?></td>
                             <td><?php echo date('d/m/Y H:i:s', strtotime($personaje['fecha_actualizacion'])); ?></td>
-                            <td><a href="<?php echo base_url('crud/editar/' . $personaje['identificador']); ?>"><button type="button" class="btn btn-info">Editar</button></a> | <a href="Eliminar"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
+                            <td><a href="<?php echo base_url('crud/' . $personaje['id'] . '/edit'); ?>"><button type="button" class="btn btn-info">Editar</button></a> | <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminaModal" data-bs-url="<?php echo base_url('crud/' . $personaje['id']); ?>">Eliminar</button></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+
+            <div class="modal fade" id="eliminaModal" tabindex="-1" aria-labelledby="eliminaModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="eliminaModalLabel">Aviso</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>¿Deseas eliminar este personaje?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <form id="form-eliminar" action="<?php echo base_url('crud') ?>" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const eliminaModal = document.getElementById('eliminaModal')
+                if (eliminaModal) {
+                    eliminaModal.addEventListener('show.bs.modal', event => {
+                        // Toma las prodpiedades del boton que se definio en html
+                        const button = event.relatedTarget
+                        // Extare el atributo data-bs-url
+                        const url = button.getAttribute('data-bs-url')
+
+                        // Busca el elmento en el formualrio del modal con id=form-eliminar y al action le pasamos la url del boton.
+                        const form = eliminaModal.querySelector('#form-eliminar')
+                        form.setAttribute('action', url)
+                    })
+                }
+            </script>
         </div>
     </div>
 </section>
-
 <!-- <?php print_r($personajes); ?> -->

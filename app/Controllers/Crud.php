@@ -8,8 +8,8 @@ use App\Models\Personajes_model;
 
 class Crud extends BaseController
 {
-    protected $helpers = ['form'];    
-    
+    protected $helpers = ['form'];
+
     //Variabel para gestionar nuestra API
     protected $api;
     protected $personajes;
@@ -61,7 +61,7 @@ class Crud extends BaseController
     public function create()
     {
         // Establecer validaciones
-        $reglas= [
+        $reglas = [
             'nombre' => 'required|max_length[240]',
             'descripcion' => 'required',
         ];
@@ -92,52 +92,74 @@ class Crud extends BaseController
         // }
     }
 
-    public function edit($identificador = null)
+    public function edit($id = null)
     {
-        // Establecer validaciones
-        // $this->form_validation->set_rules('nombre', 'Nombre', 'required');
-        // $this->form_validation->set_rules('descripcion', 'Descripción', 'required');
-
-        // if ($this->form_validation->run() == false) {
-        //     echo view('_layouts/header');
-        //     echo view('crud/index');
-        //     echo view('_layouts/footer');
-        // } else {
+        if ($id == null) {
+            return redirect()->to('crud');
+        }
 
         $modelo = $this->personajes;
-        $query = $modelo->obtener_personaje_por_identiicador($identificador);
-        $personaje = $query->getResultArray();
+        $query = $modelo->obtener_personaje_por_identiicador($id);
+        $personaje = $query->getRowArray();
 
         $data['personaje'] = $personaje;
 
-        if ($personaje) {
-            echo view('_layouts/header');
-            echo view('crud/editar', $data);
-            echo view('_layouts/footer');
-        } else {
-            return redirect()->to(base_url('crud'));
+        echo view('_layouts/header');
+        echo view('crud/editar', $data);
+        echo view('_layouts/footer');
+    }
+
+    public function update($id = null)
+    {
+        if (!$this->request->is('PUT') || $id == null) { //Si es GET O POST retorna a view crud
+            return redirect()->to('crud');
         }
 
-        $nombre = $this->request->getPost("nombre");
-        $des = $this->request->getPost("descripcion");
+        // Establecer validaciones
+        $reglas = [
+            'nombre' => 'required|max_length[240]',
+            'descripcion' => 'required',
+        ];
 
-        if ($nombre != null AND $des != null) {
-            $fecha_actualizacion = date("Y-m-d H:i:s");
-    
-            // Preparar los datos a insertar
-            $data = array(
-                'nombre' => $this->request->getPost("nombre"),
-                'descripcion' => $this->request->getPost("descripcion"),
-                'fecha_actualizacion' => $fecha_actualizacion,
-            );
-    
-            if ($this->personajes->insert($data)) {
-                return redirect()->to(base_url('crud'));
-            }
+        //Si las validaciones son incorrectas se manda un mensaje de error
+        if (!$this->validate($reglas)) {
+            return redirect()->back()->withInput()->with('error', 'Los datos son incorrectos (1)');
+        }
+
+        $fecha_actualizacion = date("Y-m-d H:i:s");
+
+        // Preparar los datos a insertar
+        $data = array(
+            'nombre' => $this->request->getPost("nombre"),
+            'descripcion' => $this->request->getPost("descripcion"),
+            'fecha_actualizacion' => $fecha_actualizacion,
+        );
+
+        if ($this->personajes->update($id, $data)) {
+            return redirect()->to(base_url('crud'))->with('exito', 'Su personaje se edito correctamente');
         }
 
         // Si algo falla regresar a la vista de crud
-        $this->index();
+        return redirect()->to(base_url('crud'));
         // }
+    }
+
+    public function delete($id)
+    {
+        if (!$this->request->is('delete') || $id == null) { //Si no es delete retorna a view crud
+            return redirect()->to('crud');
+        }
+
+        // $personajes = new Personajes_model();
+        // $personajes->delete($id);
+
+        $modelo = $this->personajes;
+        $eliminar = $modelo->eliminar_personaje_por_id($id);
+
+        if ($eliminar) {
+            return redirect()->to('crud')->with('exito', 'Su personaje se elimino correctamente');
+        }
+
+        return redirect()->to('crud');
     }
 }

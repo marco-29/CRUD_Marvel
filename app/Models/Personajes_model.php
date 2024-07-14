@@ -19,17 +19,11 @@ class Personajes_model extends Model
     protected bool $updateOnlyChanged = true;
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'fecha_registro';
     protected $updatedField  = 'fecha_actualizacion';
     protected $deletedField  = 'id';
-
-    // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
-    protected $skipValidation       = false;
-    protected $cleanValidationRules = true;
 
     public function obtener_tabla()
     {
@@ -37,9 +31,15 @@ class Personajes_model extends Model
        return $data;
     }
 
-    public function obtener_personaje_por_identiicador($identificador)
+    public function obtener_personaje_por_identiicador($id)
     {
-       $data = $this->db->query("SELECT * FROM personajes where $identificador = identificador");
+       $data = $this->db->query("SELECT * FROM personajes where $id = id");
+       return $data;
+    }
+
+    public function eliminar_personaje_por_id($id)
+    {
+       $data = $this->db->query("DELETE FROM personajes where id = $id");
        return $data;
     }
 }

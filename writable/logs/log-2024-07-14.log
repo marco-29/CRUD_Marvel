@@ -950,3 +950,736 @@ INFO - 2024-07-14 20:41:42 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-07-14 20:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-14 20:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-14 20:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 20:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-14 20:51:55 --> ErrorException: Undefined array key "identficador"
+[Method: GET, Route: crud/1011334/edit]
+in APPPATH/Views/crud/editar.php on line 1.
+ 1 APPPATH/Views/crud/editar.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "identficador"', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud/editar.php', 1)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud/editar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud/editar', [], true)
+ 5 APPPATH/Controllers/Crud.php(115): view('crud/editar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->edit('1011334')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 20:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 20:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 20:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-14 20:55:36 --> ErrorException: Undefined array key "nombre"
+[Method: GET, Route: crud/1011334/edit]
+in APPPATH/Views/crud/editar.php on line 3.
+ 1 APPPATH/Views/crud/editar.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud/editar.php', 3)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud/editar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud/editar', [], true)
+ 5 APPPATH/Controllers/Crud.php(107): view('crud/editar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->edit('1011334')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-14 20:56:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= identificador' at line 1 in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('SELECT * FROM p...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM p...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM p...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/app/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM p...')
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(101): App\Models\Personajes_model->obtener_personaje_por_identiicador(NULL)
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->edit(NULL)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-14 20:56:33 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= identificador' at line 1
+[Method: GET, Route: crud/1011334/edit]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM personajes where  = identificador')
+ 2 APPPATH/Controllers/Crud.php(101): App\Models\Personajes_model->obtener_personaje_por_identiicador(null)
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->edit(null)
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 20:56:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= identificador' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM personajes where  = identificador')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM personajes where  = identificador')
+ 3 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM personajes where  = identificador')
+ 4 APPPATH/Controllers/Crud.php(101): App\Models\Personajes_model->obtener_personaje_por_identiicador(null)
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->edit(null)
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 20:56:33 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= identificador' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('SELECT * FROM personajes where  = identificador', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM personajes where  = identificador')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM personajes where  = identificador')
+ 4 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM personajes where  = identificador')
+ 5 APPPATH/Controllers/Crud.php(101): App\Models\Personajes_model->obtener_personaje_por_identiicador(null)
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->edit(null)
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 20:57:07 --> ErrorException: Undefined array key "nombre"
+[Method: GET, Route: crud/1011334/edit]
+in APPPATH/Views/crud/editar.php on line 3.
+ 1 APPPATH/Views/crud/editar.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud/editar.php', 3)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud/editar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud/editar', [], true)
+ 5 APPPATH/Controllers/Crud.php(107): view('crud/editar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->edit('1011334')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 21:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-14 21:41:35 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: crud/21/edit]
+in APPPATH/Views/crud/editar.php on line 3.
+ 1 APPPATH/Views/crud/editar.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud/editar.php', 3)
+ 2 SYSTEMPATH/View/View.php(234): include('/Applications/MAMP/htdocs/CRUD_Marvel/app/Views/crud/editar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('crud/editar', [], true)
+ 5 APPPATH/Controllers/Crud.php(108): view('crud/editar', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->edit('21')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 21:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 21:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 22:43:19 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `persona...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `persona...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `persona...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `persona...', Array, false)
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(518): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete(Array)
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-14 22:43:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: DELETE, Route: crud/23]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:43:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:43:19\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:43:19\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 4 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:43:19 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:43:19\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:43:19\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:43:19\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 22:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 22:47:09 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `persona...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `persona...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `persona...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `persona...', Array, false)
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(518): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete(Array)
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-14 22:47:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: DELETE, Route: crud/23]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:47:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:47:09\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:47:09\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 4 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:47:09 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:47:09\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:47:09\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:47:09\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 22:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 22:48:22 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `persona...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `persona...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `persona...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `persona...', Array, false)
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(518): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete(Array)
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-14 22:48:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: DELETE, Route: crud/23]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:48:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:48:22\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:48:22\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 4 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:48:22 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:48:22\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:48:22\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:48:22\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 22:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 22:48:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 23 = id' at line 1 in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('DELETE * FROM p...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM p...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM p...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/app/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM p...')
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-14 22:48:58 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 23 = id' at line 1
+[Method: DELETE, Route: crud/23]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where 23 = id')
+ 2 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:48:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 23 = id' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM personajes where 23 = id')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM personajes where 23 = id')
+ 3 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where 23 = id')
+ 4 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:48:58 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 23 = id' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('DELETE * FROM personajes where 23 = id', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM personajes where 23 = id')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM personajes where 23 = id')
+ 4 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where 23 = id')
+ 5 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 22:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 22:49:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 'id' = 23' at line 1 in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('DELETE * FROM p...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM p...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM p...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/app/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM p...')
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-14 22:49:46 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 'id' = 23' at line 1
+[Method: DELETE, Route: crud/23]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where \'id\' = 23')
+ 2 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:49:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 'id' = 23' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM personajes where \'id\' = 23')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM personajes where \'id\' = 23')
+ 3 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where \'id\' = 23')
+ 4 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:49:46 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 'id' = 23' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('DELETE * FROM personajes where \'id\' = 23', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM personajes where \'id\' = 23')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM personajes where \'id\' = 23')
+ 4 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where \'id\' = 23')
+ 5 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 22:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 22:50:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 'id', 23' at line 1 in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('DELETE * FROM p...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM p...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM p...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/app/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM p...')
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-07-14 22:50:42 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 'id', 23' at line 1
+[Method: DELETE, Route: crud/23]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where \'id\', 23')
+ 2 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:50:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 'id', 23' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM personajes where \'id\', 23')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM personajes where \'id\', 23')
+ 3 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where \'id\', 23')
+ 4 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:50:42 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM personajes where 'id', 23' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('DELETE * FROM personajes where \'id\', 23', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE * FROM personajes where \'id\', 23')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE * FROM personajes where \'id\', 23')
+ 4 APPPATH/Models/Personajes_model.php(42): CodeIgniter\Database\BaseConnection->query('DELETE * FROM personajes where \'id\', 23')
+ 5 APPPATH/Controllers/Crud.php(157): App\Models\Personajes_model->eliminar_personaje_por_id('23')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 22:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 22:53:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '2024-07-14 22:53:04'
+WHERE `id` IN ('23')
+AND  IS NULL' at line 1 in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `persona...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `persona...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `persona...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `persona...', Array, false)
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(518): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete(Array)
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-14 22:53:04 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '2024-07-14 22:53:04'
+WHERE `id` IN ('23')
+AND  IS NULL' at line 1
+[Method: DELETE, Route: crud/23]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET  = ::
+WHERE `id` IN :id:
+AND  IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:53:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '2024-07-14 22:53:04'
+WHERE `id` IN ('23')
+AND  IS NULL' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET  = \'2024-07-14 22:53:04\'
+WHERE `id` IN (\'23\')
+AND  IS NULL')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET  = \'2024-07-14 22:53:04\'
+WHERE `id` IN (\'23\')
+AND  IS NULL')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET  = ::
+WHERE `id` IN :id:
+AND  IS NULL', [...], false)
+ 4 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:53:04 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '2024-07-14 22:53:04'
+WHERE `id` IN ('23')
+AND  IS NULL' at line 1
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `personajes` SET  = \'2024-07-14 22:53:04\'
+WHERE `id` IN (\'23\')
+AND  IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET  = \'2024-07-14 22:53:04\'
+WHERE `id` IN (\'23\')
+AND  IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET  = \'2024-07-14 22:53:04\'
+WHERE `id` IN (\'23\')
+AND  IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET  = ::
+WHERE `id` IN :id:
+AND  IS NULL', [...], false)
+ 5 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 22:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 22:57:00 --> mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause' in /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `persona...', 0)
+#1 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `persona...')
+#2 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `persona...')
+#3 /Applications/MAMP/htdocs/CRUD_Marvel/system/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `persona...', Array, false)
+#4 /Applications/MAMP/htdocs/CRUD_Marvel/system/Model.php(518): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /Applications/MAMP/htdocs/CRUD_Marvel/system/BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 /Applications/MAMP/htdocs/CRUD_Marvel/app/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete(Array)
+#7 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+#8 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 /Applications/MAMP/htdocs/CRUD_Marvel/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/CRUD_Marvel/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Applications/MAMP/htdocs/CRUD_Marvel/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-14 22:57:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+[Method: DELETE, Route: crud/23]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:, `fecha_actualizacion` = :fecha_actualizacion:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 2 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:57:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:57:00\', `fecha_actualizacion` = \'2024-07-14 22:57:00\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:57:00\', `fecha_actualizacion` = \'2024-07-14 22:57:00\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:, `fecha_actualizacion` = :fecha_actualizacion:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 4 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-14 22:57:00 --> [Caused by] mysqli_sql_exception: Unknown column 'deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:57:00\', `fecha_actualizacion` = \'2024-07-14 22:57:00\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:57:00\', `fecha_actualizacion` = \'2024-07-14 22:57:00\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `personajes` SET `deleted_at` = \'2024-07-14 22:57:00\', `fecha_actualizacion` = \'2024-07-14 22:57:00\'
+WHERE `id` IN (\'23\')
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `personajes` SET `deleted_at` = :deleted_at:, `fecha_actualizacion` = :fecha_actualizacion:
+WHERE `id` IN :id:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH/Model.php(518): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH/Controllers/Crud.php(154): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Crud->delete('23')
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-07-14 22:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 22:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 23:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 23:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 23:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 23:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 23:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 23:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 23:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 23:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

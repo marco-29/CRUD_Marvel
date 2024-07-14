@@ -36,6 +36,12 @@ class Personajes_model extends Model
        $data = $this->db->query("SELECT * FROM personajes");
        return $data;
     }
+
+    public function obtener_personaje_por_identiicador($identificador)
+    {
+       $data = $this->db->query("SELECT * FROM personajes where $identificador = identificador");
+       return $data;
+    }
 }
 
 

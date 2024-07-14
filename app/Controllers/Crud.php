@@ -8,6 +8,8 @@ use App\Models\Personajes_model;
 
 class Crud extends BaseController
 {
+    protected $helpers = ['form'];    
+    
     //Variabel para gestionar nuestra API
     protected $api;
     protected $personajes;
@@ -38,7 +40,7 @@ class Crud extends BaseController
                     'descripcion'    => $personaje['description'],
                     'fecha_registro'    => date('Y'),
                 ];
-    
+
                 $this->personajes->insert($data);
             }
         }
@@ -48,11 +50,94 @@ class Crud extends BaseController
         $data['personajes'] = $personajes;
 
         //Se dirige a la view home para mostrar los personajes los culaes se obtienen de la instancia api que esta en ApiMarvel en el metodo obtener_personajes 
-        echo view('_layouts/header');
         // return view('crud', [
         //     'personajes' => $this->api->obtener_personajes(),
         // ]);
-        echo view('crud', $data);
+        echo view('_layouts/header');
+        echo view('crud/index', $data);
         echo view('_layouts/footer');
+    }
+
+    public function create()
+    {
+        // Establecer validaciones
+        $reglas= [
+            'nombre' => 'required|max_length[240]',
+            'descripcion' => 'required',
+        ];
+
+        //Si las validaciones son incorrectas se manda un mensaje de error
+        if (!$this->validate($reglas)) {
+            return redirect()->back()->withInput()->with('error', 'Los datos son incorrectos (1)');
+        }
+
+        $fecha_registro = date("Y-m-d H:i:s");
+        $key_1 = "personajes-" . date("Y-m-d-H-i-s", strtotime($fecha_registro));
+        $identificador_1 = hash("crc32b", $key_1);
+
+        // Preparar los datos a insertar
+        $data = array(
+            'identificador' => $identificador_1,
+            'nombre' => $this->request->getPost("nombre"),
+            'descripcion' => $this->request->getPost("descripcion"),
+            'fecha_registro' => $fecha_registro,
+        );
+
+        if ($this->personajes->insert($data)) {
+            return redirect()->to(base_url('crud'))->with('exito', 'Su personaje se agrego correctamente');
+        }
+
+        // Si algo falla regresar a la vista de crud
+        return redirect()->to(base_url('crud'));
+        // }
+    }
+
+    public function edit($identificador = null)
+    {
+        // Establecer validaciones
+        // $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+        // $this->form_validation->set_rules('descripcion', 'Descripción', 'required');
+
+        // if ($this->form_validation->run() == false) {
+        //     echo view('_layouts/header');
+        //     echo view('crud/index');
+        //     echo view('_layouts/footer');
+        // } else {
+
+        $modelo = $this->personajes;
+        $query = $modelo->obtener_personaje_por_identiicador($identificador);
+        $personaje = $query->getResultArray();
+
+        $data['personaje'] = $personaje;
+
+        if ($personaje) {
+            echo view('_layouts/header');
+            echo view('crud/editar', $data);
+            echo view('_layouts/footer');
+        } else {
+            return redirect()->to(base_url('crud'));
+        }
+
+        $nombre = $this->request->getPost("nombre");
+        $des = $this->request->getPost("descripcion");
+
+        if ($nombre != null AND $des != null) {
+            $fecha_actualizacion = date("Y-m-d H:i:s");
+    
+            // Preparar los datos a insertar
+            $data = array(
+                'nombre' => $this->request->getPost("nombre"),
+                'descripcion' => $this->request->getPost("descripcion"),
+                'fecha_actualizacion' => $fecha_actualizacion,
+            );
+    
+            if ($this->personajes->insert($data)) {
+                return redirect()->to(base_url('crud'));
+            }
+        }
+
+        // Si algo falla regresar a la vista de crud
+        $this->index();
+        // }
     }
 }

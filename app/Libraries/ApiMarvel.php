@@ -2,7 +2,7 @@
 namespace App\Libraries;
 
 use CodeIgniter\HTTP\CURLRequest;
-use Config\Services; //Esto para hacer uso de los servicios y utilizarlos en la variable cur que est en el constructor
+use Config\Services; //Esto para hacer uso de los servicios y utilizarlos en la variable curl que est en el constructor
 use CodeIgniter\I18n\Time; //Esto se usa para la variable ts
 
 class ApiMarvel
@@ -49,6 +49,6 @@ class ApiMarvel
             ];
         }
 
-        return $personajes; //Se hace retorno del arreglo para verificar si funciona, esto en el controlador home
+        return $personajes; //Se hace retorno del arreglo para verificar si funciona, esto en el controlador crud
     }
 }

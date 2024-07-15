@@ -30,11 +30,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <div class="col-lg-2 col-md-2 col-2 text-end d-none d-sm-block"><a class="nav-link" href="<?php echo base_url('crud') ?>" tabindex="-1" aria-disabled="true"><img src="<?php echo base_url('almacenamiento/recursos/btn-crud.png') ?>" alt="" class="img-fluid" width="100%"></a></div>
-                <div class="col-lg-2 col-md-2 col-2 d-none d-sm-block"><a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><img src="<?php echo base_url('almacenamiento/recursos/btn-doc.png') ?>" alt="" class="img-fluid" width="100%"></a></div>
+                <div class="col-lg-2 col-md-2 col-2 d-none d-sm-block"><a class="nav-link" href="<?php echo base_url('documentacion') ?>" tabindex="-1" aria-disabled="true"><img src="<?php echo base_url('almacenamiento/recursos/btn-doc.png') ?>" alt="" class="img-fluid" width="100%"></a></div>
                 
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-6 text-end d-block d-sm-none"><a class="nav-link" href="<?php echo base_url('crud') ?>" tabindex="-1" aria-disabled="true"><img src="<?php echo base_url('almacenamiento/recursos/btn-crud.png') ?>" alt="" class="img-fluid" width="100%"></a></div>
-                    <div class="col-lg-2 col-md-2 col-6 text-end d-block d-sm-none"><a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><img src="<?php echo base_url('almacenamiento/recursos/btn-doc.png') ?>" alt="" class="img-fluid" width="100%"></a></div>
+                    <div class="col-lg-2 col-md-2 col-6 text-end d-block d-sm-none"><a class="nav-link" href="<?php echo base_url('documentacion') ?>" tabindex="-1" aria-disabled="true"><img src="<?php echo base_url('almacenamiento/recursos/btn-doc.png') ?>" alt="" class="img-fluid" width="100%"></a></div>
                 </div>
             </div>
         </div>

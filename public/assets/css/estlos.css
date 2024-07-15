@@ -4,3 +4,20 @@
     -webkit-background-size: cover;
     background-size: cover;
 }
+
+.bg-footer {
+    background: rgb(5,5,5);
+background: linear-gradient(0deg, rgba(5,5,5,1) 0%, rgba(174,47,47,1) 82%) !important;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.t-verde {
+    color: green;
+}
+
+pre {
+    background-color: rgb(55, 55, 55);
+    color: rgb(243, 243, 246);
+    font-weight: 600;
+}

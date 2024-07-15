@@ -31,7 +31,7 @@
                         <a href="<?php echo base_url('crud')?>"><img src="<?php echo base_url('almacenamiento/recursos/btn-crud.png') ?>" alt="" class="img-fluid float-end" width="50%"></a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 text-center">
-                        <a href=""><img src="<?php echo base_url('almacenamiento/recursos/btn-doc.png') ?>" alt="" class="img-fluid float-start" width="50%"></a>
+                        <a href="<?php echo base_url('documentacion')?>"><img src="<?php echo base_url('almacenamiento/recursos/btn-doc.png') ?>" alt="" class="img-fluid float-start" width="50%"></a>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         <a href="<?php echo base_url('crud')?>"><img src="<?php echo base_url('almacenamiento/recursos/btn-crud.png') ?>" alt="" class="img-fluid"></a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-6 text-center">
-                        <a href=""><img src="<?php echo base_url('almacenamiento/recursos/btn-doc.png') ?>" alt="" class="img-fluid"></a>
+                        <a href="<?php echo base_url('documentacion')?>"><img src="<?php echo base_url('almacenamiento/recursos/btn-doc.png') ?>" alt="" class="img-fluid"></a>
                     </div>
                 </div>
             </div>

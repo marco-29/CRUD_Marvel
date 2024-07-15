@@ -1,4 +1,4 @@
-<section>
+<section class="mb-5">
   <div class="container p-5">
     <h2>Editar personaje <?php echo $personaje['nombre']; ?></h2>
     <form action="<?php echo base_url('crud/' . $personaje['id']); ?>" method="POST" class="mt-5">

@@ -45,14 +45,29 @@ class Crud extends BaseController
             }
         }
 
+        $total = $modelo->contar_registros();
+        
+        $pager = service('pager');
+        $page    = (int) ($this->request->getGet('page') ?? 1);
+        $perPage = 10;
+        $offset = 0;
+
+        if (isset($page) && is_numeric($page)) {
+            $offset = ($page-1) * $perPage;
+        }
+
+        $pager_links = $pager->makeLinks($page, $perPage, $total);
+        $query_pag = $modelo->listar_limit($perPage, $offset);
+
         //Data para despues mostrarla en la vista
-        $data['db_llena'] = $db_llena;
+        $data = [
+            // ...
+            'pager_links' => $pager_links,
+            'query_pag' => $query_pag,
+        ];
         $data['personajes'] = $personajes;
 
         //Se dirige a la view home para mostrar los personajes los culaes se obtienen de la instancia api que esta en ApiMarvel en el metodo obtener_personajes 
-        // return view('crud', [
-        //     'personajes' => $this->api->obtener_personajes(),
-        // ]);
         echo view('_layouts/header');
         echo view('crud/index', $data);
         echo view('_layouts/footer');

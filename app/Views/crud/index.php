@@ -1,6 +1,3 @@
-<!-- <?= d($personajes); ?> -->
-<!-- <?php print_r($db_llena); ?> -->
-
 <!-- <div class="container p-5">
     <h1>Peronajes de marvel</h1>
     <div class="card">
@@ -83,19 +80,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($db_llena as $key => $personaje) : ?>
+                    <?php foreach ($query_pag as $key => $personaje) : ?>
                         <tr>
-                            <th scope="row"><?php echo $personaje['id']; ?></th>
-                            <td><?php echo $personaje['identificador']; ?></td>
-                            <td><?php echo $personaje['nombre']; ?></td>
-                            <td><?php echo $personaje['descripcion']; ?></td>
-                            <td><?php echo date('d/m/Y H:i:s', strtotime($personaje['fecha_registro'])); ?></td>
-                            <td><?php echo date('d/m/Y H:i:s', strtotime($personaje['fecha_actualizacion'])); ?></td>
-                            <td><a href="<?php echo base_url('crud/' . $personaje['id'] . '/edit'); ?>"><button type="button" class="btn btn-info btn-sm">Editar</button></a> <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#eliminaModal" data-bs-url="<?php echo base_url('crud/' . $personaje['id']); ?>">Eliminar</button></td>
+                            <th scope="row"><?php echo $personaje->id; ?></th>
+                            <td><?php echo $personaje->identificador; ?></td>
+                            <td><?php echo $personaje->nombre; ?></td>
+                            <td><?php echo $personaje->descripcion; ?></td>
+                            <td><?php echo date('d/m/Y H:i:s', strtotime($personaje->fecha_registro)); ?></td>
+                            <td><?php echo date('d/m/Y H:i:s', strtotime($personaje->fecha_actualizacion)); ?></td>
+                            <td><a href="<?php echo base_url('crud/' . $personaje->id . '/edit'); ?>"><button type="button" class="btn btn-info btn-sm">Editar</button></a> <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#eliminaModal" data-bs-url="<?php echo base_url('crud/' . $personaje->id); ?>">Eliminar</button></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+
+            <?= $pager_links; ?>
 
             <div class="modal fade" id="eliminaModal" tabindex="-1" aria-labelledby="eliminaModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -136,4 +135,3 @@
         </div>
     </div>
 </section>
-<!-- <?php print_r($personajes); ?> -->

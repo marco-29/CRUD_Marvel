@@ -52,7 +52,7 @@
             <?php else : ?>
                 <div class="alert alert-info">No se encontraron resultados</div>
             <?php endif; ?> -->
-            Perosnaje a buscar: <input id="searchTerm" type="text" onkeyup="doSearch()" />
+            Personaje a buscar: <input id="searchTerm" type="text" onkeyup="doSearch()" />
         </div>
 
         <div class="modal fade" id="agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -99,7 +99,7 @@
                 <tbody>
                     <?php foreach ($query_pag as $key => $personaje) : ?>
                         <tr>
-                            <th scope="row"><?php echo $personaje->id; ?></th>
+                            <th scope="row"><?php echo $key+1; ?></th>
                             <td><?php echo $personaje->identificador; ?></td>
                             <td><?php echo $personaje->nombre; ?></td>
                             <td><?php echo $personaje->descripcion; ?></td>

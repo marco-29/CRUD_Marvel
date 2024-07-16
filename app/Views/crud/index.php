@@ -19,6 +19,10 @@
     </div>
 </div> -->
 
+<?php if (isset($personaje_mostrar)) {
+    d($personaje_mostrar);
+}
+?>
 <section>
     <div class="container p-5">
 
@@ -33,9 +37,22 @@
             </div>
         <?php endif; ?>
 
-        <div class="offset-lg-11">
+        <div class="offset-lg-11 mb-5">
             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#agregar">Agregar +</button>
-            <!-- <a href="<?php echo base_url('crud/agregar') ?>"><button type="button" class="btn btn-secondary">Agregar +</button></a> -->
+        </div>
+        <div class="col-lg-5 offset-lg-9">
+            <!-- <?php if (isset($todos_personajes) && count($todos_personajes)) : ?>
+                <select name="personaje_buscado" id="personaje_buscado" class="form-control">
+                    <option value="">Mostrar todos</option>
+                    <?php foreach ($todos_personajes as $key => $personaje) : ?>
+                        <option value="<?= esc($personaje['id'], 'attr'); ?>"><?= esc($personaje['nombre']); ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <a href="<?php echo base_url('crud/' . $personaje['id']) ?>" class="btn btn-outline-secondary">Buscar</a>
+            <?php else : ?>
+                <div class="alert alert-info">No se encontraron resultados</div>
+            <?php endif; ?> -->
+            Perosnaje a buscar: <input id="searchTerm" type="text" onkeyup="doSearch()" />
         </div>
 
         <div class="modal fade" id="agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -67,7 +84,7 @@
         </div>
 
         <div class="table-responsive mt-3">
-            <table class="table">
+            <table id="datos" class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -130,6 +147,55 @@
                         const form = eliminaModal.querySelector('#form-eliminar')
                         form.setAttribute('action', url)
                     })
+                }
+            </script>
+
+            <script>
+                function doSearch() {
+                    const tableReg = document.getElementById('datos');
+                    const searchText = document.getElementById('searchTerm').value.toLowerCase();
+                    let total = 0;
+
+                    // Recorremos todas las filas con contenido de la tabla
+                    for (let i = 1; i < tableReg.rows.length; i++) {
+                        // Si el td tiene la clase "noSearch" no se busca en su cntenido
+                        if (tableReg.rows[i].classList.contains("noSearch")) {
+                            continue;
+                        }
+
+                        let found = false;
+                        const cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+                        // Recorremos todas las celdas
+                        for (let j = 0; j < cellsOfRow.length && !found; j++) {
+                            const compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                            // Buscamos el texto en el contenido de la celda
+                            if (searchText.length == 0 || compareWith.indexOf(searchText) > -1) {
+                                found = true;
+                                total++;
+                            }
+                        }
+
+                        if (found) {
+                            tableReg.rows[i].style.display = '';
+                        } else {
+                            // si no ha encontrado ninguna coincidencia, esconde la
+                            // fila de la tabla
+                            tableReg.rows[i].style.display = 'none';
+                        }
+                    }
+
+                    // mostramos las coincidencias
+                    const lastTR = tableReg.rows[tableReg.rows.length - 1];
+                    const td = lastTR.querySelector("td");
+                    lastTR.classList.remove("hide", "red");
+                    if (searchText == "") {
+                        lastTR.classList.add("hide");
+                    } else if (total) {
+                        td.innerHTML = "Se ha encontrado " + total + " coincidencia" + ((total > 1) ? "s" : "");
+                    } else {
+                        lastTR.classList.add("red");
+                        td.innerHTML = "No se han encontrado coincidencias";
+                    }
                 }
             </script>
         </div>

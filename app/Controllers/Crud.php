@@ -20,7 +20,7 @@ class Crud extends BaseController
         $this->personajes = new Personajes_model();
     }
 
-    public function index()
+    public function index($id = null)
     {
 
         //Se almacena el array de persnajes en la variable personajes ya si manipular mas facil los datos
@@ -30,6 +30,7 @@ class Crud extends BaseController
         $modelo = $this->personajes;
         $query = $modelo->obtener_tabla();
         $db_llena = $query->getResultArray();
+        $todos_personajes = $query->getResultArray(); // Array para el search
 
         //Validacion de que si la DB ya esta llena, si no es asi almacena los datos del API si ya esta llena ya no lo hara, esto se hizo con la finalidad de que solo una vez se agreguen los datos de la API.
         if (!$db_llena) {
@@ -46,14 +47,14 @@ class Crud extends BaseController
         }
 
         $total = $modelo->contar_registros();
-        
+
         $pager = service('pager');
         $page    = (int) ($this->request->getGet('page') ?? 1);
         $perPage = 10;
         $offset = 0;
 
         if (isset($page) && is_numeric($page)) {
-            $offset = ($page-1) * $perPage;
+            $offset = ($page - 1) * $perPage;
         }
 
         $pager_links = $pager->makeLinks($page, $perPage, $total);
@@ -65,7 +66,8 @@ class Crud extends BaseController
             'pager_links' => $pager_links,
             'query_pag' => $query_pag,
         ];
-        $data['personajes'] = $personajes;
+        $data['db_llena'] = $db_llena;
+        $data['todos_personajes'] = $todos_personajes;
 
         //Se dirige a la view home para mostrar los personajes los culaes se obtienen de la instancia api que esta en ApiMarvel en el metodo obtener_personajes 
         echo view('_layouts/header');

@@ -10,5 +10,5 @@ $routes->get('/', 'Home::index');
 // $routes->post('crud/agregar', 'Crud::agregar');
 // $routes->get('crud/editar/', 'Crud::editar');
 // $routes->post('crud/editar/', 'Crud::editar');
-$routes->resource('crud', ['placeholder' => '(:num)', 'except' => 'show']);
+$routes->resource('crud', ['placeholder' => '(:num)']);
 $routes->resource('documentacion');

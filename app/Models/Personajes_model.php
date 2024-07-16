@@ -69,4 +69,21 @@ class Personajes_model extends Model
          return false;
       }
    }
+
+   public function contar_registros_busqueda($id) {
+      $data = $this->db->table('personajes');
+      $data = $data->select('*')->where('id', $id);
+      $personaje = $data->get();
+
+      if ($personaje->getNumRows() > 0) {
+         return $personaje->getNumRows();
+      } else {
+         return false;
+      }
+   }
+
+   public function obtener_personaje_por_id_para_mostrar($id) {
+      $data = $this->db->query("SELECT * FROM personajes where $id = id");
+      return $data->getRowArray();
+   }
 }

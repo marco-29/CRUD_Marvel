@@ -100,7 +100,7 @@
                     <?php foreach ($query_pag as $key => $personaje) : ?>
                         <tr>
                             <th scope="row"><?php echo $key+1; ?></th>
-                            <td><?php echo $personaje->identificador; ?></td>
+                            <td class="text-center"><?php echo $personaje->id; ?></td>
                             <td><?php echo $personaje->nombre; ?></td>
                             <td><?php echo $personaje->descripcion; ?></td>
                             <td><?php echo date('d/m/Y H:i:s', strtotime($personaje->fecha_registro)); ?></td>
